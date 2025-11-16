@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - Law_Firm</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex">
+
+    <!-- Sidebar -->
+    <nav class="bg-dark text-white p-3" style="width:240px; min-height:100vh;">
+        <h4 class="text-center mb-4">CaseFlow</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a href="/Dashboard" class="nav-link text-white"><i class="fa fa-chart-line me-2"></i>Dashboard</a></li>
+            <li class="nav-item"><a href="/Client" class="nav-link text-white"><i class="fa fa-users me-2"></i>Clients</a></li>
+            <li class="nav-item"><a href="/Case" class="nav-link text-white"><i class="fa fa-gavel me-2"></i>Cases</a></li>
+            <li class="nav-item"><a href="/Lawyer" class="nav-link text-white"><i class="fa fa-user-tie me-2"></i>Lawyers</a></li>
+            <li class="nav-item"><a href="/Hearing" class="nav-link text-white"><i class="fa fa-calendar me-2"></i>Hearings</a></li>
+            <li class="nav-item"><a href="/Document" class="nav-link text-white"><i class="fa fa-file-alt me-2"></i>Documents</a></li>
+            <li class="nav-item"><a href="/Notification" class="nav-link text-white"><i class="fa fa-bell me-2"></i>Notifications</a></li>
+            <li class="nav-item"><a href="/Login" class="nav-link text-white"><i class="fa fa-sign-in"></i> Login</a></li>
+            <li class="nav-item"><a href="/Registration" class="nav-link text-white"><i class="fa fa-registered"></i> Registration</a></li>
+        </ul>
+    </nav>
+
+    <!-- Right Content -->
+    <div class="flex-fill d-flex flex-column">
+
+        <!-- Header -->
+        <nav class="navbar navbar-light bg-white shadow-sm">
+            <div class="container-fluid d-flex justify-content-center">
+                <span class="navbar-brand mb-0 h5">Law Firm Portal</span>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="p-4 flex-grow-1">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-icon text-center p-3 bg-white shadow-sm">
+            <i class="fa-solid fa-gavel mb-2" style="font-size:20px;"></i>
+            <div>&copy; @DateTime.Now.Year CaseFlow — All Rights Reserved.</div>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
